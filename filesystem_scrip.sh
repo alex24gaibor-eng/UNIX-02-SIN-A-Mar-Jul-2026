@@ -4,3 +4,4 @@ cd /dev
 ls 
 /proc
 #pwd print working directory
+ls -F #visual indicator
