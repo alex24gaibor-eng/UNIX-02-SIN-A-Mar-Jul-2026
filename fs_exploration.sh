@@ -13,3 +13,4 @@ sudo parted -l && echo -e "\n---\n" && lsblk -f && echo -e "\n---\n"
 #A complete and detailed diagnostic of your disks and partitions
 [ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS"
 #It identifies whether the system booted in UEFI mode or legacy BIOS mode
+|| If the condition fails  execute the following
