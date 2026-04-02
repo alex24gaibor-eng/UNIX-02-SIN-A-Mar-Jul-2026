@@ -9,3 +9,5 @@ sudo apt upgrade
 #It updates the software already installed on your system
 sudo apt install parted 
 #Install a tool that allows you to create, delete, and manage your hard drive partitions from the terminal
+sudo parted -l && echo -e "\n---\n" && lsblk -f && echo -e "\n---\n"
+#A complete and detailed diagnostic of your disks and partitions
