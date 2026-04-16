@@ -10,3 +10,5 @@ chmod +x script.sh #Adding execut permission
 chmod u+x script.sh #Adding execute permissions to the file owner
 chmod o-r secreto.txt #Remobing read to other
 chmod u+rw,go-rw privado #Assing read  and write to user and removing all to group and others
+
+echo "hola" | sudo tee /etc/archivo_protegido > /dev/null #doing echo wih "hola"content, and using tee to asing the output of echo to the file 
