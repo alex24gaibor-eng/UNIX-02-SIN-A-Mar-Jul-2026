@@ -1,0 +1,2 @@
+sudo sh -c 'echo "chao" >> /etc/archivo_protegido' #Append to a protected file with root privileges.
+cat /etc/archivo_protegido #It is a Linux command that reads and displays the full contents of a file directly in your terminal
