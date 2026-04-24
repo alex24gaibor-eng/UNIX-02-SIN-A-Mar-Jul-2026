@@ -20,3 +20,11 @@
    19  git commit -m "Fix problema 1: estructura de directorios corregida"
    20  ls
    21  history
+   #Problema2
+      22  mv kepler/sensores.log kepler/registros/
+   23  mv sensores.log registros/
+   24  mv ajustes.old ajustes.con
+   25  git add .
+   26  git commit -m "Fix problema 2: archivos movidos y renombrados"
+   27  history
+   
