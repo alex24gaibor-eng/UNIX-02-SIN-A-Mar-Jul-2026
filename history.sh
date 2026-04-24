@@ -33,4 +33,8 @@
    32  git commit -m "Fix problema 3: permisos numéricos 640 en sensores.log"
    33  history
    #Problmea 4
-   
+     34  chmod u+x runner.sh
+   35  chmod o-w ajustes.conf
+   36  git add .
+   37  git commit -m "Fix problema 4: permisos simbolicos corregidos"
+   38  history
