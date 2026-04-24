@@ -51,3 +51,12 @@
    47  ls -ld /tmp/kepler_zone
    48  git commit -m "Fix problema 6: sticky bit en /tmp/kepler_zone"
    49  history
+   #Problema 7
+      50  gpg --full-generate-key
+   51  gpg --list-keys
+   52  gpg --encrypt --recipient vega@kepler.lab kepler/registros/sensores.log
+   53  gpg --list-keys
+   54  gpg --encrypt --recipient vega@kepler.lab kepler/registros/sensores.log
+   55  gpg --encrypt --recipient vega@kepler.lab registros/sensores.log
+   56  git add .
+   57  git commit
