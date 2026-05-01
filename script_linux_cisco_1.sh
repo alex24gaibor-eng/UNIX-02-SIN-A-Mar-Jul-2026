@@ -13,3 +13,4 @@ pwd
 cd documents
 cd /home/sysadmin
 pwd
+cd documents
