@@ -17,3 +17,4 @@ cd documents
 cd School/Art
 pwd
 cd ..
+cd ~
