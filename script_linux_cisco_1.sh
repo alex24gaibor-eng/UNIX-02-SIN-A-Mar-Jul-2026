@@ -31,3 +31,4 @@ su -
 sl
 sudo sl
 cd ~/Documents
+ls -l hello.sh
