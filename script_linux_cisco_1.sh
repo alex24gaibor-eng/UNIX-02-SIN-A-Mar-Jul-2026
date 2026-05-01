@@ -56,4 +56,5 @@ cd ~
  mv people.csv Work
  ls Work
  mv numbers.txt letters.txt alpha.txt School
+ ls School 
  
