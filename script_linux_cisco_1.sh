@@ -48,4 +48,4 @@ ls -l hello.sh
  tail alpha.txt  
  head -n 5 alpha.txt  
  tail -n 5 alpha.txt 
- 
+cp /etc/passwd .
