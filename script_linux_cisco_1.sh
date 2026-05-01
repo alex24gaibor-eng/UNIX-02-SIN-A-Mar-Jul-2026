@@ -30,3 +30,4 @@ sl
 su -
 sl
 sudo sl
+cd ~/Documents
