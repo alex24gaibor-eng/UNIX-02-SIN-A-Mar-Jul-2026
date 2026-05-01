@@ -7,3 +7,4 @@ ls -l -r
 ls -rl
 aptitude moo
 aptitude -v moo
+aptitude -vv moo
