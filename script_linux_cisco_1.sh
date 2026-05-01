@@ -29,3 +29,4 @@ exit
 sl
 su -
 sl
+sudo sl
