@@ -5,3 +5,4 @@ ls -l
 ls -r
 ls -l -r
 ls -rl
+aptitude moo
