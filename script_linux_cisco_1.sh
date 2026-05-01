@@ -25,3 +25,4 @@ ls -l -S /var/log
 ls -lSr /var/log
 ls -r /var/log  
 su -
+exit
