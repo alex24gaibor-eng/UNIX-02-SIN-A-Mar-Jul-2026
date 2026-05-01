@@ -47,3 +47,5 @@ ls -l hello.sh
  head alpha.txt  
  tail alpha.txt  
  head -n 5 alpha.txt  
+ tail -n 5 alpha.txt 
+ 
