@@ -39,3 +39,4 @@ ls -l hello.sh
  cd ~/Documents
  ls -l  
  sudo chown root hello.sh
+ ls -l hello.sh 
