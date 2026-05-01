@@ -18,3 +18,4 @@ cd School/Art
 pwd
 cd ..
 cd ~
+ls
