@@ -9,3 +9,4 @@ aptitude moo
 aptitude -v moo
 aptitude -vv moo
 aptitude -vvv moo
+pwd
