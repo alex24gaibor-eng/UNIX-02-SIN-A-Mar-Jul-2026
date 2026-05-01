@@ -27,3 +27,4 @@ ls -r /var/log
 su -
 exit
 sl
+su -
