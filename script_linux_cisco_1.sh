@@ -12,3 +12,4 @@ aptitude -vvv moo
 pwd
 cd documents
 cd /home/sysadmin
+pwd
