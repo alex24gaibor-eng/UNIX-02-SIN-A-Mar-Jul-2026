@@ -19,3 +19,4 @@ pwd
 cd ..
 cd ~
 ls
+ls -l /var/log/
