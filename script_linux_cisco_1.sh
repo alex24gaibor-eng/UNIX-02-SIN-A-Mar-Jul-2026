@@ -11,3 +11,4 @@ aptitude -vv moo
 aptitude -vvv moo
 pwd
 cd documents
+cd /
