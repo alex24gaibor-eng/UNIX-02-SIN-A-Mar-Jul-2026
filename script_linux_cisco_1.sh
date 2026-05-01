@@ -51,3 +51,4 @@ ls -l hello.sh
 cp /etc/passwd .
 ls
 cd ~
+ dd if=/dev/zero of=/tmp/swapex bs=1M count=50 
