@@ -58,3 +58,4 @@ cd ~
  mv numbers.txt letters.txt alpha.txt School
  ls School 
  ls 
+ mv animals.txt zoo.txt
