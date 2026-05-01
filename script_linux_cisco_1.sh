@@ -22,3 +22,4 @@ ls
 ls -l /var/log/
 ls -lt /var/log/
 ls -l -S /var/log 
+ls -lSr /var/log
