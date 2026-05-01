@@ -61,3 +61,4 @@ cd ~
  mv animals.txt zoo.txt
 rm linux.txt
 ls linux.txt
+rm Work
