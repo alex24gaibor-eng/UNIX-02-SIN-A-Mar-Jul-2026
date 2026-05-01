@@ -59,4 +59,4 @@ cd ~
  ls School 
  ls 
  mv animals.txt zoo.txt
- ls
+rm linux.txt
