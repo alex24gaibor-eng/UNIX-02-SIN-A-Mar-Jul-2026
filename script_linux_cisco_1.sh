@@ -33,3 +33,4 @@ sudo sl
 cd ~/Documents
 ls -l hello.sh
 . /hello.sh
+chmod u+x hello.sh
