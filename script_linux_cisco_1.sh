@@ -49,3 +49,4 @@ ls -l hello.sh
  head -n 5 alpha.txt  
  tail -n 5 alpha.txt 
 cp /etc/passwd .
+ls
