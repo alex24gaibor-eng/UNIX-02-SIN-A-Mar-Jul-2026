@@ -14,3 +14,4 @@ cd documents
 cd /home/sysadmin
 pwd
 cd documents
+cd School/Art
