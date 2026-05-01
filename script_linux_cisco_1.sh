@@ -50,3 +50,4 @@ ls -l hello.sh
  tail -n 5 alpha.txt 
 cp /etc/passwd .
 ls
+cd ~
