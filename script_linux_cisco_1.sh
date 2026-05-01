@@ -34,3 +34,5 @@ cd ~/Documents
 ls -l hello.sh
 . /hello.sh
 chmod u+x hello.sh
+ls -l hello.sh
+./hello.sh
