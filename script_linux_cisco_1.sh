@@ -45,3 +45,4 @@ ls -l hello.sh
  cat animals.txt 
  cat alpha.txt 
  head alpha.txt  
+ tail alpha.txt  
