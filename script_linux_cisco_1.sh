@@ -46,3 +46,4 @@ ls -l hello.sh
  cat alpha.txt 
  head alpha.txt  
  tail alpha.txt  
+ head -n 5 alpha.txt  
