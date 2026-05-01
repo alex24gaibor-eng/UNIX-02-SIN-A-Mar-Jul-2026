@@ -21,3 +21,4 @@ cd ~
 ls
 ls -l /var/log/
 ls -lt /var/log/
+ls -l -S /var/log 
