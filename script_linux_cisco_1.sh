@@ -44,3 +44,4 @@ ls -l hello.sh
  sudo ./hello.sh 
  cat animals.txt 
  cat alpha.txt 
+ head alpha.txt  
