@@ -60,3 +60,4 @@ cd ~
  ls 
  mv animals.txt zoo.txt
 rm linux.txt
+ls linux.txt
