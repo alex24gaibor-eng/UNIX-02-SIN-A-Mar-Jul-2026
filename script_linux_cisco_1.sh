@@ -40,3 +40,4 @@ ls -l hello.sh
  ls -l  
  sudo chown root hello.sh
  ls -l hello.sh 
+ ./hello.sh 
