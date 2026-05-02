@@ -100,6 +100,7 @@ ps
 ps -e
 ps -ef
 sudo apt-get update 
+apt-cache search cow 
 
 
 
