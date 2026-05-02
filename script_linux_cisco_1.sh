@@ -95,7 +95,7 @@ shutdown +1 "Goodbye World!"
 ifconfig
 ping -c 4 192.168.1.2 
 ping -c 4 192.168.1.3
-
+exit
 
 
 
