@@ -118,4 +118,5 @@ echo "Hello"
 cat newfile1.txt    
 echo "I like food." > newfile1.txt  
 cat newfile1.txt     
-echo "This food is good." >> newfile1.txt     
+echo "This food is good." >> newfile1.txt 
+cat newfile1.txt      
