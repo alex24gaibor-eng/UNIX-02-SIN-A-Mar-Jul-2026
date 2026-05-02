@@ -65,3 +65,4 @@ rm Work
 rm -r Work
 ls Work
 cd ~/Documents
+cp /etc/passwd .
