@@ -91,6 +91,7 @@ su -
 shutdown now 
 date 
 shutdown 01:51 
+shutdown +1 "Goodbye World!"
 
 
 
