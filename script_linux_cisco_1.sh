@@ -79,3 +79,4 @@ grep 'r..t' /etc/passwd
 cat profile.txt
 grep '[0-9]' profile.txt
 grep '[.]' profile.txt
+cat red.txt
