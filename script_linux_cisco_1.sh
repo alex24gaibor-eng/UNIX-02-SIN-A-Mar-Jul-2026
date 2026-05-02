@@ -108,4 +108,4 @@ sudo apt-get upgrade
 sudo apt-get purge cowsay
 passwd
 passwd -S sysadmin
-
+su root 
