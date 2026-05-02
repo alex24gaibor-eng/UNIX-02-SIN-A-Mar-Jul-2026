@@ -69,3 +69,4 @@ cp /etc/passwd .
 grep sysadmin passwd 
 grep 'root' passwd
 grep '^root' /etc/passwd
+cat alpha-first.txt  
