@@ -90,6 +90,7 @@ cd ~
 su - 
 shutdown now 
 date 
+shutdown 01:51 
 
 
 
