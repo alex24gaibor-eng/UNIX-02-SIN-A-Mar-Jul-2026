@@ -87,6 +87,7 @@ grep 'e*' red.txt
 grep 'ee*' red.txt
 grep 'red'
 cd ~
+su - 
 
 
 
