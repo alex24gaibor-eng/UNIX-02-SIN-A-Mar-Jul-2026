@@ -99,6 +99,8 @@ exit
 ps 
 ps -e
 ps -ef
+sudo apt-get update 
+
 
 
 
