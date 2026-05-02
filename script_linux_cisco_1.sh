@@ -105,6 +105,6 @@ sudo apt-get install cowsay
 cowsay 'NDG Linux Unhatched'
 sudo apt-get update
 sudo apt-get upgrade
-
+sudo apt-get purge cowsay
 
 
