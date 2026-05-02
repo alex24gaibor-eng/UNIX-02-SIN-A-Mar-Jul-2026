@@ -68,3 +68,4 @@ cd ~/Documents
 cp /etc/passwd .
 grep sysadmin passwd 
 grep 'root' passwd
+grep '^root' /etc/passwd
