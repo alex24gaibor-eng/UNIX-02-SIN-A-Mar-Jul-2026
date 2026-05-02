@@ -71,3 +71,4 @@ grep 'root' passwd
 grep '^root' /etc/passwd
 cat alpha-first.txt  
 grep 'r$' alpha-first.txt
+cat red.txt
