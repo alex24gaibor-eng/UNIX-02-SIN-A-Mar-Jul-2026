@@ -112,3 +112,4 @@ su root
 passwd sysadmin 
 cd ~/Documents
 cat food.txt 
+cat food.txt > newfile1.txt
