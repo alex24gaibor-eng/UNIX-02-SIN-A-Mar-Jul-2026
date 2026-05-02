@@ -104,7 +104,7 @@ apt-cache search cow
 sudo apt-get install cowsay 
 cowsay 'NDG Linux Unhatched'
 sudo apt-get update
-
+sudo apt-get upgrade
 
 
 
