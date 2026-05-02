@@ -85,3 +85,12 @@ grep 'r[oe]*d' red.txt
 grep 'z*' red.txt
 grep 'e*' red.txt
 grep 'ee*' red.txt
+grep 'red'
+
+
+
+
+
+
+
+
