@@ -110,3 +110,4 @@ passwd
 passwd -S sysadmin
 su root 
 passwd sysadmin 
+cd ~/Documents
