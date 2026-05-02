@@ -89,6 +89,7 @@ grep 'red'
 cd ~
 su - 
 shutdown now 
+date 
 
 
 
