@@ -63,3 +63,5 @@ rm linux.txt
 ls linux.txt
 rm Work
 rm -r Work
+ls Work
+cd ~/Documents
