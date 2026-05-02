@@ -66,3 +66,4 @@ rm -r Work
 ls Work
 cd ~/Documents
 cp /etc/passwd .
+grep sysadmin passwd 
