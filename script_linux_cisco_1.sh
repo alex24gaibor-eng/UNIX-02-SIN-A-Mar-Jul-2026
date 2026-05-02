@@ -111,3 +111,4 @@ passwd -S sysadmin
 su root 
 passwd sysadmin 
 cd ~/Documents
+cat food.txt 
