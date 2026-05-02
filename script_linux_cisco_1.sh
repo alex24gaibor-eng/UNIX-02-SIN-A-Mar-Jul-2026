@@ -88,6 +88,7 @@ grep 'ee*' red.txt
 grep 'red'
 cd ~
 su - 
+shutdown now 
 
 
 
