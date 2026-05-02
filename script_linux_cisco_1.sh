@@ -75,3 +75,4 @@ cat red.txt
 grep 'r..f' red.txt
 grep 'r..d' red.txt
 grep '....' red.txt  
+grep 'r..t' /etc/passwd
