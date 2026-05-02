@@ -81,3 +81,4 @@ grep '[0-9]' profile.txt
 grep '[.]' profile.txt
 cat red.txt
 grep 're*d' red.txt
+grep 'r[oe]*d' red.txt
