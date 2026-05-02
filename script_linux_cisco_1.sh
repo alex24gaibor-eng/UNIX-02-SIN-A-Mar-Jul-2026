@@ -114,4 +114,5 @@ cd ~/Documents
 cat food.txt 
 cat food.txt > newfile1.txt
 cat newfile1.txt   
-echo "Hello"                   
+echo "Hello"    
+cat newfile1.txt               
