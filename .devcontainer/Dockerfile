@@ -233,6 +233,10 @@ __set_prompt() {
 }
 PROMPT_COMMAND=__set_prompt
 EOF
+# Añadir al final de tu Dockerfile, antes de CMD ["/bin/bash"]
+
+# Prompt del curso para Zsh (✓ si es 0, ✗ si falla)
+RUN echo 'PROMPT="%(?.%F{green}✓%f.%F{red}✗%f) %F{cyan}[Alex_Gaibor]%f %F{yellow}%1~%f %# "' >> /root/.zshrc
 CMD ["/bin/bash"]
 
 
