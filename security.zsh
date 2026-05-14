@@ -114,3 +114,21 @@ chown -R luna:grupo_test proyecto
 
 ls -lR proyecto
 # Shows details for the folder and everything inside it.
+id
+# Displays a complete breakdown of the current user's identity and group memberships.
+
+cat /etc/passwd | head -10
+# Reads the system's user database and prints only the top 10 entries.
+
+# Check specific identification numbers for the active session:
+id -u
+# Shows the unique numerical identifier (UID) for your account.
+
+id -g
+# Reveals the ID of your primary (default) group.
+
+id -G
+# Lists every group ID associated with your profile, including secondary ones.
+
+cat /etc/group | grep root
+# Scans the group configuration file to filter and display only lines mentioning "root".
