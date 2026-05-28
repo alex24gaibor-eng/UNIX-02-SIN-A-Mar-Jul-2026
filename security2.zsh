@@ -34,3 +34,25 @@ mkdir -p ~/proyecto_dev/src
 # Builds a nested directory structure "proyecto_dev/src" in the user's home folder. The '-p' flag ensures that any missing parent directories are created automatically and prevents errors if the folder already exists.
 ls -la ~/
 # Lists all files and directories inside the user's home path in a detailed format, including hidden items, to inspect the newly created directories and their inherited permissions.
+newgrp desarrolladores
+# Launches a new shell session, temporarily shifting the active user's primary group to "desarrolladores".
+apt install login -y
+# Installs the 'login' software package, utilizing the '-y' flag to automatically answer "yes" to any confirmation prompts.
+newgrp desarrolladores
+# Re-executes the command to switch the user's primary group identity to "desarrolladores" in a new subshell.
+apt install login -y
+# Re-runs the automatic installation of the 'login' package without requiring manual user intervention.
+newgrp desarrolladores
+# Spawns yet another shell session to set "desarrolladores" as the active primary group.
+apt install util-linux-extra
+# Fetches and installs the 'util-linux-extra' package to provide additional system administration tools.
+newgrp desarrolladores
+# Attempts again to log the user into a new shell with "desarrolladores" as the main group.
+addgroup desarrolladores
+# Provisions the "desarrolladores" user group within the operating system (note: if it was already created earlier, the system will simply output that it already exists).
+newgrp desarrolladores
+# Executes the group switch to "desarrolladores" one final time to ensure the session is actively using it.
+id -gn
+# Outputs exclusively the text name of the active user's current primary group to verify the environment's state.
+ls -la ~/antes_de_newgrp.txt ~/dentro_de_newgrp.txt
+# Displays comprehensive metadata for both specified files simultaneously, allowing for a direct side-by-side comparison of their access rights, user ownership, and inherited group properties.
