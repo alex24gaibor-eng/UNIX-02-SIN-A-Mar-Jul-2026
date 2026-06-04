@@ -5,3 +5,4 @@ IP_ADDRESSES=(192.168.1.1 192.168.1.2 192.168.1.3)
 echo "${IP_ADDRESSES[*]}"
 # Prints only the first element in the array
 echo "${IP_ADDRESSES[0]}
+unsete IP_ADDREDESSES [1]= "192.168.1.10
