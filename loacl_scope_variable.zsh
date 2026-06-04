@@ -1,0 +1,1 @@
+bash local_scope_variable.sh
