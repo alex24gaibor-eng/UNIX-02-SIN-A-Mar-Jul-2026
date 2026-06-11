@@ -78,3 +78,20 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     proxychains4 \
     && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen \
     && echo "es_EC.UTF-8 UTF-8" >> /etc/locale.gen \
+# =========================================================================
+# f) sed -i '.../etc/locale.gen' && locale-gen
+# 'sed' is a Stream Editor used to modify text profiles on the fly (BHB Ch. 2).
+# The '-i' option modifies the file 'in-place' (directly changing it without creating a copy).
+# Here, it ensures the targeted locales are active in '/etc/locale.gen', and 'locale-gen' builds them.
+# This explicitly enables both English and Spanish system configurations.
+#
+# g) apt-get clean && rm -rf /var/lib/apt/lists/*
+# This is the cleanup phase. 'apt-get clean' deletes the downloaded package installation files (.deb).
+# 'rm -rf' removes the raw repository lists directory. Executing this at the very end of the 
+# chained RUN block guarantees no junk metadata gets saved into the final image layer.
+# =========================================================================
+    && sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen \
+    && sed -i -e 's/# es_EC.UTF-8 UTF-8/es_EC.UTF-8 UTF-8/' /etc/locale.gen \
+    && locale-gen \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
