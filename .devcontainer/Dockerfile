@@ -31,3 +31,50 @@ ENV DEBIAN_FRONTEND=noninteractive \
 # This "pre-answers" the question automatically so the Docker build process never stalls waiting for human input.
 # =========================================================================
 RUN echo "wireshark-common wireshark-common/install-setuid boolean true" | debconf-set-selections
+# =========================================================================
+# e) The big RUN apt-get update && apt-get install ...
+# - 'apt-get update' downloads the latest list of available packages from repositories.
+# - 'apt-get install' actually downloads and deploys the listed software.
+# - The '-y' flag automatically answers "yes" to installation confirmations.
+# - '--no-install-recommends' prevents installing non-essential recommended packages, keeping the image small.
+#
+# Why ONE big RUN instruction chained with '&&' and '\'?
+# In Docker, every RUN command creates a separate layer. If we split updates, installs, and clean-ups 
+# into multiple RUN commands, the temporary files get permanently locked inside intermediate layers, 
+# bloating the image size. Chaining them with '&&' (execute next if previous succeeded - BHB Ch. 1) 
+# ensures everything runs in a single layer, allowing us to clean up files before the layer is saved.
+#
+# Key tools purposes (BHB Ch. 2 & Ch. 3):
+# - gawk, sed, grep: Powerful text manipulation utilities used to parse, filter, and modify text streams.
+# - shellcheck: A static analysis tool used to find syntax bugs and bad practices in shell scripts.
+# - nmap, tcpdump, tshark: Critical network discovery and packet capture utilities for security labs.
+# - tor, proxychains4: Tools utilized to route internet traffic through proxies for privacy and anonymity.
+# - jq: A command-line processor specifically built to parse and extract data from JSON formats.
+# - man-db: Re-enables the manual pages documentation utility, which is stripped by default in Docker.
+# =========================================================================
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    sudo \
+    coreutils \
+    bash \
+    zsh \
+    git \
+    git-lfs \
+    curl \
+    wget \
+    ca-certificates \
+    less \
+    locales \
+    man-db \
+    procps \
+    gawk \
+    sed \
+    grep \
+    jq \
+    shellcheck \
+    nmap \
+    tcpdump \
+    tshark \
+    tor \
+    proxychains4 \
+    && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen \
+    && echo "es_EC.UTF-8 UTF-8" >> /etc/locale.gen \
