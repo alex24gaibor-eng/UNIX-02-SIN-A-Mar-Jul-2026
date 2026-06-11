@@ -95,3 +95,27 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && locale-gen \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+# =========================================================================
+# h) SHELL ["/bin/bash", "-c"]
+# By default, Docker executes RUN commands using '/bin/sh' (the minimalist system shell).
+# This instruction overrides it to use '/bin/bash', ensuring that advanced features like 
+# arrays, advanced loops, and robust string expansions are supported during subsequent steps (BHB Ch. 1).
+# =========================================================================
+SHELL ["/bin/bash", "-c"]
+
+# =========================================================================
+# i) WORKDIR /workspace
+# This command sets the default active working directory inside the container's file system.
+# It behaves just like running a 'cd /workspace' command. Any subsequent instruction (RUN, CMD) 
+# will run inside this folder, and it's where your project files are mounted.
+# =========================================================================
+WORKDIR /workspace
+
+# =========================================================================
+# j) RUN git config --system ... && git lfs install --system
+# Configures Git settings at the global system level, meaning these rules apply to all users 
+# within the container. It configures the safe directory to prevent ownership permission conflicts 
+# and initializes Git Large File Storage (LFS) to handle tracking big binary datasets.
+# =========================================================================
+RUN git config --system --add safe.directory /workspace \
+    && git lfs install --system
