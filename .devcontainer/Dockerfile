@@ -23,3 +23,11 @@ ENV DEBIAN_FRONTEND=noninteractive \
     LANG=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8 \
     TERM=xterm-256color
+# =========================================================================
+# d) RUN ... debconf-set-selections
+# In Debian-based systems, 'debconf' manages package installation questions.
+# Some security tools like Wireshark prompt the user to ask if non-root users should capture packets.
+# This instruction uses a pipe (|) to redirect the pre-defined answer "true" into the debconf database (BHB Ch. 1).
+# This "pre-answers" the question automatically so the Docker build process never stalls waiting for human input.
+# =========================================================================
+RUN echo "wireshark-common wireshark-common/install-setuid boolean true" | debconf-set-selections
