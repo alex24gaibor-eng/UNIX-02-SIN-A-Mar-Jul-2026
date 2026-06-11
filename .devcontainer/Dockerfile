@@ -119,7 +119,8 @@ WORKDIR /workspace
 # =========================================================================
 RUN git config --system --add safe.directory /workspace \
     && git lfs install --system
-# =========================================================================
+
+ # =========================================================================
 # k) RUN chsh -s /usr/bin/zsh root
 # Changes the default login shell ('chsh') for the root user from Bash to Zsh.
 # Zsh provides advanced interactive capabilities, auto-completions, and structural features 
@@ -138,7 +139,7 @@ RUN chsh -s /usr/bin/zsh root
 RUN cat >> /root/.zshrc <<'EOF'
 
 # ===== Valida si un comando fue ejecutado correctamente =====
-PROMPT='%F{magenta}[😎Alex-Gaibor]%f %F{cyan}%1~%f %(?,%F{green}✓,%F{red}✗ %?)%f %# '\nEOF
+PROMPT='%F{yellow}[😎Alex-Gaibor]%f %F{cyan}%1~%f %(?,%F{green}✓,%F{red}✗ %?)%f %# '\
 EOF
 
 # =========================================================================
