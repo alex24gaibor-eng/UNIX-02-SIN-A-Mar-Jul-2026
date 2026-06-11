@@ -119,3 +119,33 @@ WORKDIR /workspace
 # =========================================================================
 RUN git config --system --add safe.directory /workspace \
     && git lfs install --system
+# =========================================================================
+# k) RUN chsh -s /usr/bin/zsh root
+# Changes the default login shell ('chsh') for the root user from Bash to Zsh.
+# Zsh provides advanced interactive capabilities, auto-completions, and structural features 
+# that improve efficiency during terminal usage (BHB Ch. 1).
+# =========================================================================
+RUN chsh -s /usr/bin/zsh root
+
+# =========================================================================
+# l) here-document (cat >> /root/.zshrc <<'EOF' ... EOF)
+# A Here-Document (heredoc) is an advanced multi-line input redirection technique (BHB Ch. 1).
+# Using '<<'EOF'', it passes a whole block of text directly into the standard input of 'cat'.
+# The '>>' operator appends this stream to the end of the root user's '.zshrc' file without overwriting it.
+# The PROMPT line configures the interactive visual look of the shell, establishing the colors, 
+# directory names, and icons displayed in the user terminal line.
+# =========================================================================
+RUN cat >> /root/.zshrc <<'EOF'
+
+# ===== Valida si un comando fue ejecutado correctamente =====
+PROMPT='%F{magenta}[😎Alex-Gaibor]%f %F{cyan}%1~%f %(?,%F{green}✓,%F{red}✗ %?)%f %# '\nEOF
+EOF
+
+# =========================================================================
+# m) CMD ["/usr/bin/zsh"]
+# Difference between RUN and CMD:
+# - 'RUN' executes commands *during image build time* to create physical layers on disk.
+# - 'CMD' defines the *default runtime command* that executes when the container is actually launched.
+# Here, it ensures that as soon as the container fires up, it opens an interactive Zsh shell session.
+# =========================================================================
+CMD ["/usr/bin/zsh"]
