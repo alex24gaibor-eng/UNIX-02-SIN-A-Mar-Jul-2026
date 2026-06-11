@@ -11,3 +11,15 @@
 # instructions (like base images and general variables) at the top to optimize build times.
 # =========================================================================
 FROM kalilinux/kali-rolling:latest
+# =========================================================================
+# c) ENV (DEBIAN_FRONTEND, LANG, LC_ALL, TERM)
+# Environment variables are dynamic values that configure how processes behave in the shell (BHB Ch. 1).
+# - DEBIAN_FRONTEND=noninteractive: Tells apt-get to suppress interactive configuration screens or 
+#   questions during installation, preventing the build from getting stuck.
+# - LANG and LC_ALL: Set the global language, character set encoding (UTF-8), and localization rules.
+# - TERM=xterm-256color: Instructs the terminal emulator to support rich 256-color output for scripts.
+# =========================================================================
+ENV DEBIAN_FRONTEND=noninteractive \
+    LANG=en_US.UTF-8 \
+    LC_ALL=en_US.UTF-8 \
+    TERM=xterm-256color
