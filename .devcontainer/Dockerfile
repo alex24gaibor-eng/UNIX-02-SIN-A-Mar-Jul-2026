@@ -188,7 +188,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Por defecto Docker usa /bin/sh (un shell más limitado y antiguo). Lo
 # cambiamos a bash por si agregamos más instrucciones con sintaxis
 # moderna (arrays, [[ ]], etc.).
-SHELL ["/bin/bash", "-c"]
+SHELL ["/bin/zsh", "-c"]
 
 
 # ----------------------------------------------------------------------------
@@ -223,7 +223,7 @@ RUN git config --system --add safe.directory '*' \
 RUN chsh -s /usr/bin/zsh root
 
 # Prompt institucional para los y las estudiantes del curso. 
-RUN cat >> /root/.zshrc <<'EOF'
+RUN cat >> /root/.zsh <<'EOF'
 
 # ===== Valida si un comando fue ejecutado correctamente =====
 PROMPT='%F{cyan}[😎 Alex-Gaibor]%f %F{yellow}%1~%f %(?,%F{green}✓,%F{red}✗ %?)%f %# '
