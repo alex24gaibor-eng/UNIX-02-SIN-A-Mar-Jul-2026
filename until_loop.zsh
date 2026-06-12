@@ -1,33 +1,32 @@
 #!/bin/bash
 
-FILE="output.txt"
-# ^ Crea una variable llamada FILE y le asigna el texto "output.txt".
-# Este será el archivo que el script va a monitorear.
+for file in example_file*; do
+# ^ Initiates a "for" loop. It scans the working directory for any items 
+# matching the wildcard pattern "example_file*". 
+# During each cycle of the loop, the variable "file" is assigned the name of the next matching item.
 
-touch "${FILE}"
-# ^ El comando "touch" crea el archivo en caso de que no exista (iniciándolo vacío).
-# Si el archivo ya existía previamente, no borra su contenido, solo actualiza su fecha de modificación.
+    if [[ "${file}" == "example_file1" ]]; then
+    # ^ Begins a conditional "if" statement. It checks whether the text currently 
+    # stored in the "file" variable is an exact match for "example_file1".
 
-until [[ -s "${FILE}" ]]; do
-# ^ Inicia un bucle "until" (hasta que). 
-# El operador "-s" comprueba si el archivo existe y tiene un tamaño mayor a cero (es decir, si NO está vacío).
-# A diferencia del "while" (que se ejecuta *mientras* pase algo), el "until" se repite *hasta que* pase algo.
-# En resumen: el bucle se repetirá HASTA QUE el archivo tenga algún contenido.
+        echo "Skipping the first file"
+        # ^ If the condition evaluates to true, this command outputs a notification 
+        # to the terminal indicating that this specific file is being bypassed.
 
-    echo "${FILE} is empty..."
-    # ^ Imprime un mensaje en la pantalla avisando que el archivo está vacío actualmente.
+        continue
+        # ^ The "continue" statement acts as a shortcut: it halts the execution of the current cycle. 
+        # It forces the loop to immediately jump back up and fetch the next item, skipping the 
+        # execution of any remaining commands below it for this specific iteration.
 
-    echo "Checking again in 2 seconds..."
-    # ^ Muestra otro mensaje indicando que volverá a hacer la comprobación en un par de segundos.
+    fi
+    # ^ Terminates the "if" conditional block.
 
-    sleep 2
-    # ^ Pone en pausa la ejecución del programa durante exactamente 2 segundos.
+    echo "${RANDOM}" > "${file}"
+    # ^ ${RANDOM} is an internal Bash feature that returns a pseudo-random integer (0-32767). 
+    # The ">" redirection symbol writes this random number directly into the active file. 
+    # If the file already contained data, it is completely overwritten by this new number. 
+    # (Note: "example_file1" escapes this step because the "continue" statement bypassed it).
 
 done
-# ^ Marca el final del bloque del bucle. Si el archivo sigue vacío, 
-# el script vuelve arriba (al "until") y repite la espera.
-
-echo "${FILE} appears to have some content in it!"
-# ^ En el momento en que otro programa o tú (por ejemplo, usando el comando del mensaje anterior) 
-# escriban algo dentro de "output.txt", el tamaño del archivo será mayor a cero. 
-# El bucle "until" termina, y el script llega a esta línea avisando que detectó contenido.
+# ^ Signifies the end of the "for" loop block. The script will move past this line 
+# only after every file matching the initial pattern has been fully processed.
